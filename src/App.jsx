@@ -1,24 +1,32 @@
-import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 import './App.css';
+
 import Authentication from './routes/auth/Authentication';
+import Dashboard from './routes/dashboard/Dashboard';
 
 const env = import.meta.env.VITE_API;
 
 function App() {
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState({ isLoggedIn: false });
 
   useEffect(() => {
     const credentials = localStorage.getItem('accessCredential');
     if (credentials) {
+      const data = window.atob(credentials);
+      const userName = data.split(':');
+      setUser({ username: userName[0], isLoggedIn: true });
     }
   }, []);
 
   return (
     <div className="App">
-      {/* {!isLoggedIn ? () : () } */}
-      <Authentication setUser={setUser} />
+      <Routes>
+        <Route path="login" element={<Authentication setUser={setUser} user={user} />} />
+        <Route path="dashboard" element={<Dashboard setUser={setUser} user={user} />} />
+        <Route path="*" element={<Navigate to="login" replace />} />
+      </Routes>
     </div>
   );
 }

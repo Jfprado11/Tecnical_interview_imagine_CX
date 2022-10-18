@@ -1,5 +1,6 @@
 import { faKey, faLock, faLockOpen, faUser } from '@fortawesome/free-solid-svg-icons';
 import { useRef, useState } from 'react';
+import { Navigate } from 'react-router-dom';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 import Snackbar from '../../components/Snackbar';
@@ -16,11 +17,13 @@ function Authentication({ user, setUser }) {
 
   const snackbarRef = useRef(null);
 
+  if (user.isLoggedIn) return <Navigate to="/dashboard" replace />;
+
   const handleSubmit = async (onSubmit) => {
     onSubmit.preventDefault();
     const isValid = await login(username, password);
     if (isValid) {
-      setUser(username);
+      setUser({ username, isLoggedIn: true });
     }
     if (!isValid) {
       snackbarRef.current.show();
