@@ -18,6 +18,12 @@
   background-color: var(--color-orange-dark);
 }
 
+.btn.disabled {
+  background-color: var(--color-grey-dark);
+  color: var(--color-text);
+  cursor: auto;
+}
+
 .btn .icons-span {
   margin-right: 8px;
 }
