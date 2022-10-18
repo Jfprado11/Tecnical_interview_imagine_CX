@@ -1,0 +1,84 @@
+:root {
+  /* width
+    --------------------------*/
+  --container-width: 1000px;
+
+  /* colors
+    -----------------------------*/
+  --primary-color: #fa9d41;
+  --color-grey-light: #e7e2db;
+  --color-grey-dark: #c2beb8;
+  --color-orange-dark: #ad6d3e;
+  --color-orange-light: #fa7e25;
+  --color-white: #ffffff;
+  --color-black: #071629;
+  --color-text: var(--color-black);
+  --link-hover-active: var(--color-grey-light);
+  --button-hover-active: 0.9;
+
+  /* fonts
+    ----------------------*/
+  --font-primary: Source Sans Pro;
+  /* --font-secondary:  */
+
+  /* Fonts size
+    ---------------------------*/
+  --font-extra-small: 1rem;
+  --font-small: 1.2rem;
+  --font-medium: 1.6rem;
+  --font-regular: 1.8rem;
+  --font-large: 2.4rem;
+  --font-extra-large: 3.2rem;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+/* Restructuring fonts sizes 
+====================================================*/
+h1 {
+  font-size: var(--font-extra-large);
+}
+
+h2 {
+  font-size: var(--font-large);
+}
+
+h3 {
+  font-size: var(--font-regular);
+}
+
+h4 {
+  font-size: var(--font-medium);
+}
+h5 {
+  font-size: var(--font-small);
+}
+
+h6 {
+  font-size: var(--font-extra-small);
+}
+
+p,
+a,
+strong,
+b,
+i,
+span,
+div {
+  font-size: var(--font-regular);
+}

@@ -1,0 +1,23 @@
+.btn {
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 0;
+  font-size: var(--font-regular);
+  line-height: 16px;
+  color: #ffffff;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn--light {
+  background-color: var(--color-orange-light);
+}
+
+.btn--dark {
+  background-color: var(--color-orange-dark);
+}
+
+.btn .icons-span {
+  margin-right: 8px;
+}
