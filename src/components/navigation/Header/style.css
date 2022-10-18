@@ -1,0 +1,34 @@
+.header {
+  width: 100%;
+  height: 62px;
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-black);
+}
+
+.header > span {
+  margin-left: 30px;
+  color: #ffffff;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav p {
+  display: inline-block;
+  margin-right: 20px;
+  color: #ffffff;
+}
+
+.nav span {
+  display: inline-block;
+  margin-right: 30px;
+  color: var(--color-red);
+  cursor: pointer;
+}

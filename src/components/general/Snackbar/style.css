@@ -16,7 +16,7 @@
 }
 
 .snackbar.error {
-  background-color: #ff0033;
+  background-color: var(--color-red);
   color: #ffffff;
 }
 

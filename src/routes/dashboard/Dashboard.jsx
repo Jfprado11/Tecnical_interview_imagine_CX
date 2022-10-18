@@ -1,12 +1,15 @@
 import { Navigate } from 'react-router-dom';
+import Header from '../../components/navigation/Header';
+
+import './dashboard.css';
 
 function Dashboard({ user, setUser }) {
   if (!user.isLoggedIn) return <Navigate to="/login" replace />;
 
   return (
-    <>
-      <h1>Hello to the Dashboard</h1>
-    </>
+    <div className="dashboard">
+      <Header user={user} setUser={setUser} />
+    </div>
   );
 }
 

@@ -1,9 +1,9 @@
 import { faKey, faLock, faLockOpen, faUser } from '@fortawesome/free-solid-svg-icons';
 import { useRef, useState } from 'react';
 import { Navigate } from 'react-router-dom';
-import Button from '../../components/Button';
-import Input from '../../components/Input';
-import Snackbar from '../../components/Snackbar';
+import Button from '../../components/general/Button';
+import Input from '../../components/general/Input';
+import Snackbar from '../../components//general/Snackbar';
 import { login } from '../../services/auth';
 
 import './auth.css';

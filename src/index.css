@@ -10,9 +10,10 @@
   --color-grey-dark: #c2beb8;
   --color-orange-dark: #ad6d3e;
   --color-orange-light: #fa7e25;
+  --color-red: #ff0033;
   --color-white: #ffffff;
-  --color-black: #071629;
-  --color-text: var(--color-black);
+  --color-black: #161616;
+  --color-text: #071629;
   --link-hover-active: var(--color-grey-light);
   --button-hover-active: 0.9;
 
