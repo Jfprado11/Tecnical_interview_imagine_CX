@@ -15,7 +15,7 @@ function Header({ user, setUser }) {
       <nav className="nav">
         <p>¡Bienvenido {user.username}!</p>
         <span onClick={logout}>
-          <FontAwesomeIcon icon={faSignOut} />
+          <FontAwesomeIcon icon={faSignOut} /> Cerrar Sesion
         </span>
       </nav>
     </header>

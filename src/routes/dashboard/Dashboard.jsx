@@ -1,5 +1,6 @@
-import { Navigate } from 'react-router-dom';
+import { Link, Navigate, Outlet } from 'react-router-dom';
 import Header from '../../components/navigation/Header';
+import SideBar from '../../components/navigation/SideBar';
 
 import './dashboard.css';
 
@@ -9,6 +10,10 @@ function Dashboard({ user, setUser }) {
   return (
     <div className="dashboard">
       <Header user={user} setUser={setUser} />
+      <SideBar />
+      <main className="dashboard__main">
+        <Outlet />
+      </main>
     </div>
   );
 }

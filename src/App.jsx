@@ -24,7 +24,11 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="login" element={<Authentication setUser={setUser} user={user} />} />
-        <Route path="dashboard" element={<Dashboard setUser={setUser} user={user} />} />
+        <Route path="dashboard" element={<Dashboard setUser={setUser} user={user} />}>
+          <Route index element={<Navigate to="contacts" />} />
+          <Route path="contacts" element={<h2>Hola contactos</h2>} />
+          <Route path="staff" element={<h2>Hola Staff</h2>} />
+        </Route>
         <Route path="*" element={<Navigate to="login" replace />} />
       </Routes>
     </div>

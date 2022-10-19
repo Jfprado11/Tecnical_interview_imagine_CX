@@ -1,4 +1,4 @@
-import { faKey, faLock, faLockOpen, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faKey, faLock, faLockOpen, faUser, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { useRef, useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import Button from '../../components/general/Button';
@@ -15,18 +15,23 @@ function Authentication({ user, setUser }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const snackbarRef = useRef(null);
+  const snackbarRefNotAuth = useRef(null);
+  const snackbarRefError = useRef(null);
 
   if (user.isLoggedIn) return <Navigate to="/dashboard" replace />;
 
   const handleSubmit = async (onSubmit) => {
     onSubmit.preventDefault();
     const isValid = await login(username, password);
-    if (isValid) {
+    if (isValid.logged) {
       setUser({ username, isLoggedIn: true });
     }
-    if (!isValid) {
-      snackbarRef.current.show();
+    if (!isValid.logged) {
+      if (isValid.status === 401) {
+        snackbarRefNotAuth.current.show();
+      } else {
+        snackbarRefError.current.show();
+      }
     }
   };
 
@@ -69,7 +74,8 @@ function Authentication({ user, setUser }) {
           </Button>
         </div>
       </form>
-      <Snackbar ref={snackbarRef} message="Las credenciales no estan correctas" type="error" />
+      <Snackbar ref={snackbarRefNotAuth} message="Las credenciales no estan correctas" type="error" />
+      <Snackbar ref={snackbarRefError} message="Surgio algun error" type="error" icon={faXmark} />
     </>
   );
 }

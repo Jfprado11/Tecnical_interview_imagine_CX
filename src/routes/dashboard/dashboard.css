@@ -3,3 +3,9 @@
   height: 100vh;
   background-color: var(--color-white);
 }
+
+.dashboard__main {
+  width: 80vw;
+  height: 50vh;
+  margin: 7rem 0 0 6rem;
+}

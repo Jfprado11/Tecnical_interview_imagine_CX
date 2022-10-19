@@ -1,0 +1,68 @@
+/* large size SideBar 
+ ------------------------------------------------------*/
+
+.sidebar {
+  width: 28rem;
+  height: 100%;
+  padding-top: 1.6rem;
+  position: fixed;
+  top: 6.2rem;
+  left: 0;
+  z-index: 1;
+  background-color: var(--color-orange-light);
+}
+
+.sidebar__navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar__navigation .li {
+  width: 100%;
+  height: 6rem;
+  padding: 1.5rem 1.6rem;
+  display: flex;
+  align-items: center;
+  color: var(--color-black);
+  text-decoration: none;
+  text-align: start;
+  cursor: pointer;
+}
+
+.sidebar__navigation .navigation__icon {
+  width: 2.7rem;
+  height: 2.7rem;
+}
+
+.sidebar__navigation .navigation__text {
+  margin-left: 1.5rem;
+  font-weight: bold;
+}
+
+.sidebar__navigation .selected-page {
+  position: relative;
+  background-color: var(--primary-color);
+}
+
+.sidebar__navigation .selected-page .select-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  right: 3rem;
+}
+
+/* Small size sidebar
+---------------------------------------------- */
+
+.sidebar.small {
+  width: 6rem;
+}
+
+.sidebar.small .navigation__text {
+  display: none;
+}
+
+.sidebar.small .select-icon {
+  display: none;
+}
