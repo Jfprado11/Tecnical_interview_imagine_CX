@@ -5,6 +5,7 @@ import './App.css';
 
 import Authentication from './routes/auth/Authentication';
 import Contacts from './routes/dashboard/Contacts';
+import ViewContact from './routes/dashboard/Contacts/ViewContact';
 import Dashboard from './routes/dashboard/Dashboard';
 
 const env = import.meta.env.VITE_API;
@@ -28,6 +29,7 @@ function App() {
         <Route path="dashboard" element={<Dashboard setUser={setUser} user={user} />}>
           <Route index element={<Navigate to="contacts" />} />
           <Route path="contacts" element={<Contacts />} />
+          <Route path="contacts/:contactId" element={<ViewContact />} />
           <Route path="staff" element={<h2>Hola Staff</h2>} />
         </Route>
         <Route path="*" element={<Navigate to="login" replace />} />

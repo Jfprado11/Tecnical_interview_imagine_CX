@@ -1,0 +1,78 @@
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+.card-contacts {
+  width: 97%;
+  height: 6rem;
+  padding: 2rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  /* border-bottom: 2px solid var(--color-text); */
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--color-orange-soft);
+  box-shadow: 0 0px 3px var(--color-text);
+  list-style: none;
+}
+
+.card-contacts:hover {
+  background-color: #d7c1ac;
+}
+
+.card-contacts div {
+  width: 20%;
+}
+
+/* Editing the each cell inside the card
+--------------------------------------------------- */
+
+/* .card-actions{
+
+} */
+.icon-view {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.icon-edit {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.icon-delete {
+  cursor: pointer;
+}
+
+.icon-view:hover {
+  color: var(--color-orange-dark);
+  transition: color 0.2s ease-in;
+}
+
+.icon-edit:hover {
+  color: rgb(61, 117, 215);
+  transition: color 0.2s ease-in;
+}
+
+.icon-delete:hover {
+  color: var(--color-red);
+  transition: color 0.2s ease;
+}
+
+/* View Contact styles
+================================================================================ */
+.contact-page {
+  height: 100%;
+}
+
+/* Modal body
+================================================================================ */
+.modal-header {
+  font-size: var(--font-large);
+  font-weight: bold;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+}

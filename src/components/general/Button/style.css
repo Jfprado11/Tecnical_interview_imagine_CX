@@ -1,4 +1,5 @@
 .btn {
+  width: 12rem;
   padding: 1rem;
   border-radius: 1rem;
   border: 0;
@@ -16,6 +17,9 @@
 
 .btn--dark {
   background-color: var(--color-orange-dark);
+}
+.btn--red {
+  background-color: var(--color-red);
 }
 
 .btn.disabled {
