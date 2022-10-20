@@ -10,6 +10,7 @@ const login = async (username, password) => {
       url: URL,
       headers: { Authorization: `Basic ${credential}`, 'Content-Type': 'application/json' },
     });
+    console.log(res);
 
     if (res.status === 200) {
       localStorage.setItem('accessCredential', credential);
